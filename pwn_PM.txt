@@ -1,0 +1,66 @@
+LVL 1
+cd /
+cat flag
+
+LVL 2
+cd /
+more flag
+
+LVL 3
+cd /
+less flag
+
+LVL 4
+cd /
+tail flag
+
+LVL 5
+cd /
+head flag
+
+LVL 6
+cd /
+sort flag
+
+LVL 7
+cd /
+vim flag
+
+LVL 8
+cd /
+emacs flag
+
+LVL 9
+cd /
+nano flag
+
+LVL 10
+cd /
+rev flag | rev
+
+LVL 11
+cd /
+od -An -c flag
+(Poi copi-incolli su vscode, ctrl+f, replace all degli spazi con stringa vuota e ottieni flag)
+
+LVL 12
+cd /
+hd flag
+(poi la ricostruisci tu)
+
+LVL 13
+cd /
+xxd flag | xxd -r
+
+LVL 14
+cd /
+base32 flag | base32 -d
+
+LVL 15
+cd /
+base64 flag | base64 -d
+
+LVL 16
+cd /
+split flag
+cat xaa
