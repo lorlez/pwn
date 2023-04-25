@@ -64,3 +64,34 @@ LVL 16
 cd /
 split flag
 cat xaa
+
+LVL 17
+cd /
+gzip flag
+gzip -dc flag.gz
+
+LVL 18
+cd /
+bzip2 flag
+bzip2 -dc flag.bz2
+
+LVL 19
+cd /
+zip flag.zip flag
+cat flag.zip
+
+
+
+...
+
+
+
+LVL 37
+cd /
+chown hacker flag
+cat flag
+
+LVL 38
+cd /
+chmod a+r flag
+cat flag
