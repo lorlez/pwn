@@ -1,0 +1,69 @@
+[Da vscode, fare /bin/bash]
+
+LVL 1
+./eseguibile per runnare
+
+LVL 2
+echo 'asd' | ./eseguibile per pipe in stdin per eseguibile
+
+LVL 3
+./eseguibile asd
+dove asd è il promo argomento dato al programma
+
+LVL 4
+export KEY = "VALUE"
+dove settare la variabile d'ambiente KEY a VALUE
+
+LVL 5
+cat > /tmp/cxxfve << EOF
+lknfmoro
+EOF
+./eseguibile < /tmp/cxxfve
+dove	> fileOutput
+	<< EOF 		per scrivere su multilinea e alla fine metti EOF per chiudere
+	< fileInput 	differenza tra pipe | e redirect <
+			| mette lo stdout id un eseguibile nello stdin di un altro
+			< prende lo stream da un file (anche > lavora con i file)
+
+LVL 6
+./eseguibile > fileOutput
+nel file finirà lo stdout dell'eseguibile
+
+LVL 7
+env -i ./eseguibile
+invoca un eseguibile in un ambiente senza variabili.
+(L'esecuzione di un programma avviene in un ambiente con delle variabili come ad esempio i file aperti o la cwd)
+
+LVL 8/9/10/11/12/13/14
+Gli script eseguibili finisconon per .sh e come prima linea hanno #!/bin/bash
+si eseguono con ./script.sh
+Per editare si usa
+vi file.txt, per finire :wq
+
+LVL 15/16/17/18
+ipython sta per interactive python.
+lanci ed esegui le istruzioni singolarmente
+
+--PYTHON--
+import subprocess
+subprocess.run(["command_str","arg1"])
+per stdin "-" al posto di "arg1" credo, per var d'ambiente prima le setti normalmente su shell poi fai partire ipython
+
+LVL 19
+import subprocess
+import os
+file = open("/tmp/zciunw", 'w')
+file.write('brzglgxn')
+file = open("/tmp/zciunw", 'r')
+subprocess.run(['/challenge/embryoio_level19'], stdin=file)
+
+LVL 22
+### script.py ###
+import subprocess
+subprocess.run(['/challenge/embryoio_level22'])
+#########
+
+LVL 
+
+
+
