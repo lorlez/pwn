@@ -1,0 +1,7 @@
+.intel_syntax noprefix
+
+.global _start
+_start:
+and rsi, rdi
+add rax, 0xffffffffffffffff
+and rax, rsi
