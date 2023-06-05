@@ -1,8 +1,13 @@
 LVL_1:
+
   mov rdi, 0x1337
+  
 LVL_2:
+
   add rdi, 0x331337
+  
 LVL_3:
+
   mov rax, rdi
   mov rbx, rdx
   mul rsi
@@ -96,3 +101,11 @@ LVL_16:
   mov rbx, 4
   div rbx
   push rax
+
+
+N.B:
+
+-Generalmente il registro di destinazione è il primo
+-mul reg moltiplica rax per reg e salva il risultato in rax (bit meno significativi) ed in rdx (bit più significativi)
+-div reg divide rax per reg e salva il risultato in rax ed il resto in rdx
+-Dimensioni: rax -> eax -> ax -> ah|al
