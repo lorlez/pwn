@@ -1,100 +1,83 @@
 LVL 1
-cd /
-cat flag
+cat /flag
 
 LVL 2
-cd /
-more flag
+more /flag
 
 LVL 3
-cd /
-less flag
+less /flag
 
 LVL 4
-cd /
-tail flag
+tail /flag
 
 LVL 5
-cd /
-head flag
+head /flag
 
 LVL 6
-cd /
-sort flag
+sort /flag
 
 LVL 7
-cd /
-vim flag
+vim /flag
 
 LVL 8
-cd /
-emacs flag
+emacs /flag
 
 LVL 9
-cd /
-nano flag
+nano /flag
 
 LVL 10
-cd /
-rev flag | rev
+rev /flag | rev
 
 LVL 11
-cd /
-od -An -c flag
+od -An -c /flag
 (Poi copi-incolli su vscode, ctrl+f, replace all degli spazi con stringa vuota e ottieni flag)
 
 LVL 12
-cd /
-hd flag
+hd /flag
 (poi la ricostruisci tu)
 
 LVL 13
-cd /
-xxd flag | xxd -r
+xxd /flag | xxd -r
 
 LVL 14
-cd /
-base32 flag | base32 -d
+base32 /flag | base32 -d
 
 LVL 15
-cd /
-base64 flag | base64 -d
+base64 /flag | base64 -d
 
 LVL 16
-cd /
-split flag
+split /flag
 cat xaa
 
 LVL 17
-cd /
-gzip flag
+gzip /flag
 gzip -dc flag.gz
 
 LVL 18
-cd /
-bzip2 flag
+bzip2 /flag
 bzip2 -dc flag.bz2
 
 LVL 19
-cd /
-zip flag.zip flag
+zip flag.zip /flag
 cat flag.zip
 
+LVL 20
+tar -czf flag.tar /flag
+tar -xf flag.tar /flag -O
 
+LVL 21
 
 ...
 
 
 
 LVL 37
-cd /
-chown hacker flag
+chown hacker /flag
 cat flag
 
 LVL 38
-cd /
-chmod a+r flag
-cat flag
+chmod a+r /flag
+cat /flag
 
 LVL 40
 mv /flag /bin/mv
