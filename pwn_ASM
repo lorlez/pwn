@@ -1,1 +1,98 @@
 LVL_1:
+  mov rdi, 0x1337
+LVL_2:
+  add rdi, 0x331337
+LVL_3:
+  mov rax, rdi
+  mov rbx, rdx
+  mul rsi
+  add rax, rbx
+
+LVL_4:
+
+  mov rax, rdi
+  div rsi
+  
+LVL_5:
+
+  mov rax, rdi
+  div rsi
+  mov rax, rdx
+
+LVL_6:
+
+  mov rbx, rdi
+  mov al, bl
+  mov rcx, rsi
+  mov bx, cx
+
+LVL_7:
+
+  mov rax, rdi
+  shl rax, 24
+  shr rax, 56
+
+LVL_8:
+
+  and rsi, rdi
+  add rax, 0xffffffffffffffff
+  and rax, rsi
+
+LVL_9:
+
+  and rax, 1
+  and rax, rdi
+  xor rax, 1
+
+
+LVL_10:
+
+  mov rax, [0x404000]
+  mov rbx, [0x404000]
+  add rbx, 0x1337
+  mov [0x404000], rbx
+
+
+LVL_11:
+
+  mov al, [0x404000]
+  mov bx, [0x404000]
+  mov ecx, [0x404000]
+  mov rdx, [0x404000]
+
+LVL_12:
+
+  mov rax, 0xdeadbeef00001337
+  mov [rdi], rax
+  mov rbx, 0xc0ffee0000
+  mov [rsi], rbx
+
+LVL_13:
+
+  mov rax, [rdi]
+  mov rbx, [rdi + 8]
+  add rax, rbx
+  mov [rsi], rax
+
+LVL_14:
+
+  mov rax, [0x7fffff1ffff8]
+  sub rax, rdi
+  mov [0x7fffff1ffff8], rax
+
+LVL_15:
+
+  push rdi
+  push rsi
+  pop rdi
+  pop rsi
+
+LVL_16:
+
+  mov rax, [rsp]
+  add rax, [rsp + 8]
+  add rax, [rsp + 16]
+  add rax, [rsp + 24]
+  mov rbx, 4
+  div rbx
+  push rax
