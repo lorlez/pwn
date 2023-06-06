@@ -69,7 +69,11 @@ LVL 21
 
 ...
 
+LVL 30
+setarch $(uname -m) /bin/cat /flag
 
+LVL 31
+watch -x cat /flag
 
 LVL 37
 chown hacker /flag
