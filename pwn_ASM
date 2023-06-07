@@ -109,3 +109,4 @@ N.B:
 -mul reg moltiplica rax per reg e salva il risultato in rax (bit meno significativi) ed in rdx (bit più significativi)
 -div reg divide rax per reg e salva il risultato in rax ed il resto in rdx
 -Dimensioni: rax -> eax -> ax -> ah|al
+-Con and reg, <num> fai una mask con gli 1 in <num>
