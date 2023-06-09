@@ -1,3 +1,18 @@
+-------- script.sh ---------------
+#! usr/bin/bash
+
+gcc -nostdlib -o program program.s
+objcopy --dump-section .text=program_binary program
+/challenge/run < program_binary
+
+-------- program.s intro ---------
+.intel_syntax noprefix
+
+.global _start
+_start:
+
+----------------------------------
+
 LVL_1:
 
   mov rdi, 0x1337
