@@ -62,8 +62,8 @@ zip flag.zip /flag
 cat flag.zip
 
 LVL 20
-tar -czf flag.tar /flag
-tar -xf flag.tar /flag -O
+tar -cf flag.tar /flag
+cat flag.tar
 
 LVL 21
 
@@ -126,5 +126,16 @@ wc --files0-from=/flag
 
 LVL 48
 
+gcc -xc /flag
+
 LVL 49
 as /flag
+
+-------- Parole chiave --------
+print
+char
+file
+stdout
+output
+string
+
