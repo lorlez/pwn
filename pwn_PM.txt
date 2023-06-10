@@ -66,6 +66,10 @@ tar -cf flag.tar /flag
 cat flag.tar
 
 LVL 21
+ar -r archive.a /flag
+
+LVL 22
+
 
 ...
 
@@ -138,4 +142,6 @@ file
 stdout
 output
 string
+execute
+example
 
