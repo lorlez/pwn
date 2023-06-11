@@ -63,7 +63,23 @@ import subprocess
 subprocess.run(['/challenge/embryoio_level22'])
 #########
 
-LVL 
+########################################################################
+############################ IN GENERALE ###############################
+########################################################################
 
+FARE:
+-eseguire programma
+-password over stdin
+-argomento passato al programma
+-coppia key-value env key=value ./eseguibile
+-file in input < input_file.txt
+-file in output > output_file.txt
+-environment vuoto env -i ./eseg
+-eseguibilie in input: cat, grep, sed, rev
 
-
+DA:
+-Bash
+-Shellscript
+-Python script
+-Python interactive shell
+-C program
