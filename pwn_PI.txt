@@ -71,11 +71,16 @@ FARE:
 -eseguire programma
 -password over stdin
 -argomento passato al programma
--coppia key-value env key=value ./eseguibile
+-N-esimo argomento passato al programma
+-coppia key-value env -i key=value ./eseguibile [argv]
 -file in input < input_file.txt
 -file in output > output_file.txt
 -environment vuoto env -i ./eseg
 -eseguibilie in input: cat, grep, sed, rev
+	cat 'string'
+	grep 'pwn'
+	sed 'p' 'string'
+	'string' | rev | rev
 
 DA:
 -Bash
