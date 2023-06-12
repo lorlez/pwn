@@ -83,3 +83,12 @@ DA:
 -Python script
 -Python interactive shell
 -C program
+
+ESEGUIRE CODICE DA C PROGRAM:
+
+ESEGUIRE CODICE DA PYTHON / iPython:
+	import subprocess
+
+	process = subprocess.run/Popen(['executable','space','separated','options'],stdin=file,stdout=subprocess.PIPE)
+	subprocess.run(['executable','space','separated','options'],stdin=process.stdout)
+	
