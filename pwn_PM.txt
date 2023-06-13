@@ -145,3 +145,9 @@ string
 execute
 example
 
+HARD TO REMEMBER:
+-genisoimage -sort /flag
+-touch file.txt && socat /flag FILE:file.txt
+-awk '{print $0}' /flag
+-perl -nE 'say /(.+)$/' /flag
+-gcc -xc /flag
