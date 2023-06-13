@@ -76,6 +76,7 @@ FARE:
 -file in input < input_file.txt
 -file in output > output_file.txt
 -environment vuoto env -i ./eseg
+-argc = 0
 -eseguibilie in input: cat, grep, sed, rev
 	cat 'string'
 	grep 'pwn'
