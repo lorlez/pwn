@@ -17,3 +17,8 @@ Syscall <--- (*)
   Syscall: .word 0x0000
   
 Aggiungere nop all'inizio se serve
+
+
+gcc -nostdlib -o program program.s
+objcopy --dump-section .text=program_binary program
+/challenge/run < program_binary
