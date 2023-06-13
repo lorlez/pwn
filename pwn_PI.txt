@@ -101,4 +101,32 @@ ESEGUIRE CODICE DA PYTHON / iPython:
 	
 ° Con rev fare ctrl + d dopo che hai messo password
 ° subprocess.run([], executable='/challenge/embryoio_level75') per argc = 0
-	
+
+--------------------- program C -------------------------
+
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+void pwncollege(char *argv[],char *env[]){
+	execve("/challenge/embryoio_levelxx", argv,env);
+	return ;
+}
+
+int main(){
+	pid_t pid;
+	char *my_argv[] = {"...", NULL};
+	char *my_env[] = {"...", NULL};
+
+	pid=fork();
+
+	if(pid<0)
+		printf("error in fork!\\n");
+	else if (pid==0){
+		pwncollege(my_argv, my_env);
+	}
+	else{
+		wait(NULL);
+	}
+	return 0;
+}
