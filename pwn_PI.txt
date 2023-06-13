@@ -97,3 +97,7 @@ ESEGUIRE CODICE DA PYTHON / iPython:
 	process = subprocess.run/Popen(['executable','space','separated','options'],stdin=file,stdout=subprocess.PIPE)
 	subprocess.run(['executable','space','separated','options'],stdin=process.stdout)
 	
+	
+° Con rev fare ctrl + d dopo che hai messo password
+° subprocess.run([], executable='/challenge/embryoio_level75') per argc = 0
+	
