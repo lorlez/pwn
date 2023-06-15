@@ -117,8 +117,96 @@ LVL_16:
   div rbx
   push rax
 
+LVL_17:
 
-N.B:
+  jmp salto
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  nop
+  salto:
+  pop rdi
+  mov rax, 0x403000
+  jmp rax
+
+----------------------- N.B -----------------------
 
 -Generalmente il registro di destinazione è il primo
 -mul reg moltiplica rax per reg e salva il risultato in rax (bit meno significativi) ed in rdx (bit più significativi)
