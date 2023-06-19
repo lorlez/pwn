@@ -206,6 +206,32 @@ LVL_17:
   mov rax, 0x403000
   jmp rax
 
+LVL 18
+
+  mov ebx, 0x7f454c46
+  
+  cmp ebx, [edi]
+  jne next1
+  mov eax, [edi+4]
+  add eax, [edi+8]
+  add eax, [edi+12]
+  jmp end
+  
+  next1:
+  mov ebx, 0x00005A4D
+  cmp ebx, [edi]
+  jne next2
+  mov eax, [edi+4]
+  sub eax, [edi+8]
+  sub eax, [edi+12]
+  jmp end
+  
+  next2:
+  mov eax, [edi+4]
+  imul eax, [edi+8]
+  imul eax, [edi+12]
+  
+  end:
 ----------------------- N.B -----------------------
 
 -Generalmente il registro di destinazione è il primo
