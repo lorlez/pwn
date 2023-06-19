@@ -232,6 +232,17 @@ LVL 18
   imul eax, [edi+12]
   
   end:
+
+LVL 19:
+  cmp rdi, 3
+  jg next
+  
+  mov rax, 8
+  mul rdi
+  jmp [rsi+rax]
+  
+  next:
+  jmp [rsi+32]
 ----------------------- N.B -----------------------
 
 -Generalmente il registro di destinazione è il primo
