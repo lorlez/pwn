@@ -146,8 +146,15 @@ execute
 example
 
 HARD TO REMEMBER:
+-gzip /flag > archive.gz
+    gzip -dc archive.gz
+-find -exec cat /flag \;
 -genisoimage -sort /flag
 -touch file.txt && socat /flag FILE:file.txt
 -awk '{print $0}' /flag
 -perl -nE 'say /(.+)$/' /flag
 -gcc -xc /flag
+-touch makefile
+    file := /flag
+    variable := $(shell cat{$file})
+    make -p | grep 'pwn'
