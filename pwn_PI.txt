@@ -101,6 +101,8 @@ ESEGUIRE CODICE DA PYTHON / iPython:
 	
 ° Con rev fare ctrl + d dopo che hai messo password
 ° subprocess.run([], executable='/challenge/embryoio_level75') per argc = 0
+° per argomento in posizione 0: ln -s /challenge/embryoio_levelxx argomento e poi ???
+° 
 
 --------------------- program C -------------------------
 
