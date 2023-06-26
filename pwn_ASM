@@ -256,6 +256,38 @@ LVL 20:
   jmp loop
   
   end:
+
+LVL 21:
+
+
+LVL 22:
+
+xor rax, rax
+
+test rdi, rdi  
+je end  # if src_addr != 0
+    loop:
+    mov rdx, [rdi]
+    cmp rdx, 0
+    je end  # while [src_addr] != 0
+        mov rbx, [rdi]
+        cmp bl, 90 <--- non viene detto esplicitamente ma il check deve essere fatto tra 90 e l'ultimo byte di rbx
+        jg out  # if [src_addr] <= 90
+            push rax
+            push rdi
+            mov rdi, [rdi] <--- In rdi va il primo argomento della funzione
+            mov rax, 0x403000
+            call rax
+            pop rdi
+            mov [rdi], rax <--- la funzione salva il risultato in rax
+            pop rax
+            add rax, 1
+        out:
+        add rdi, 1
+    jmp loop
+
+end:
+ret
 ----------------------- N.B -----------------------
 
 -Generalmente il registro di destinazione è il primo
