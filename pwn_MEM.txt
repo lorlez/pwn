@@ -43,9 +43,16 @@ Per trovare l'indirizzo di win():
 objdump -d /challenge/babymem_levelx.x > analysis.txt
 "ctrl + f" in analysis.txt, cerca "<win>" e guarda a che indirizzo è
 
+[es 4.0 4.1] mettere come dimensione input sempre -200
+
 [es 5.0 5.1] (funziona solo con 4 pacchetti boh)
 Viene fatta la moltiplicazione tra il numero di pacchetti e la dimensione del singolo pacchetto.
 Poi viene fatto il check sui 4 byte meno significativi del prodotto risultante: se sono meno di 8 byte li accetta
 Quindi se gli dai un totale di 0x0000000100000004 (4294967300 decimale) byte li vede come se fossero 4.
 Scegli 4 pacchetti e dagli 4294967300/4 byte: 1073741825 (sostituisci direttamente nello script python)
-poi la solita roba dello script
+poi la solita roba dello script.
+Ricorca che stdin non funziona con lo script bruteforce.
+
+[es 7.0 7.1]
+cercare con objdump il solito indirizzo win_authed dopo il check e la dimensione del padding dopo scanf (7.1).
+Creare l'input e darlo in pasto alla challenge fino a quando non hai la chiave
