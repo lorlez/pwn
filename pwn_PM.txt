@@ -156,5 +156,5 @@ HARD TO REMEMBER:
 -gcc -xc /flag
 -touch makefile
     file := /flag
-    variable := $(shell cat{$file})
+    variable := $(shell cat ${file})
     make -p | grep 'pwn'
