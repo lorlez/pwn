@@ -152,9 +152,14 @@ HARD TO REMEMBER:
 -genisoimage -sort /flag
 -touch file.txt && socat /flag FILE:file.txt
 -awk '{print $0}' /flag
--perl -nE 'say /(.+)$/' /flag
 -gcc -xc /flag
--touch makefile
+21) ar -r archive.a /flag
+26) touch makefile
     file := /flag
     variable := $(shell cat ${file})
     make -p | grep 'pwn'
+32) cat file && socat /flag FILE:file && cat file
+33) whiptail --textbox /flag 10 50
+41) perl -nE 'say /(.+)$/' /flag
+44) bash -p && cat /flag
+50) wget -i /flag --base /flag
