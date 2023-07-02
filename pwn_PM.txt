@@ -146,13 +146,13 @@ execute
 example
 
 HARD TO REMEMBER:
--gzip /flag > archive.gz
+17) gzip /flag > archive.gz
     gzip -dc archive.gz
--find -exec cat /flag \;
--genisoimage -sort /flag
--touch file.txt && socat /flag FILE:file.txt
--awk '{print $0}' /flag
--gcc -xc /flag
+22) find -exec cat /flag \;
+??) genisoimage -sort /flag
+32) touch file.txt && socat /flag FILE:file.txt
+34) awk '{print $0}' /flag
+??) gcc -xc /flag
 21) ar -r archive.a /flag
 26) touch makefile
     file := /flag
