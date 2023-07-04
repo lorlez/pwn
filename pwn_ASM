@@ -264,7 +264,7 @@ LVL 22:
 
 xor rax, rax
 
-test rdi, rdi  
+cmp rdi, 0  
 je end  # if src_addr != 0
     loop:
     mov rdx, [rdi]
