@@ -146,8 +146,8 @@ execute
 example
 
 HARD TO REMEMBER:
-17) gzip -k /flag
-    gzip -dc archive.gz
+17) gzip /flag
+    gzip -dc /flag.gz
 22) find -exec cat /flag \;
 ??) genisoimage -sort /flag
 32) touch file.txt && socat /flag FILE:file.txt
