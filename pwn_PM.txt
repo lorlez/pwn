@@ -146,7 +146,7 @@ execute
 example
 
 HARD TO REMEMBER:
-17) gzip /flag > archive.gz
+17) gzip -k /flag
     gzip -dc archive.gz
 22) find -exec cat /flag \;
 ??) genisoimage -sort /flag
